@@ -9,7 +9,6 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(search)
   }
 
   const handleChange = (event) => {

@@ -1,21 +1,25 @@
-.movie{
+/* .movie{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     width: 100%;
-}
+} */
 
 .listmovies{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
-    gap: 20px;
+    gap: 20px; */
+
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.movie-li-header{
+/* .movie-li-header{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,4 +38,4 @@
 .movie-li-poster{
     width: 250px;
     height: 250px
-}
+} */

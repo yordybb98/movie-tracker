@@ -1,6 +1,7 @@
 main {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .page {
@@ -8,6 +9,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 h1 {
