@@ -1,9 +1,7 @@
 import './App.css'
 import { Movies } from './Components/movies'
 
-
 function App() {
- 
   return (
     <div className='page'>
       <header>

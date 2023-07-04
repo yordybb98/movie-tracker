@@ -1,0 +1,37 @@
+.movie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.listmovies{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 20px;
+}
+
+.movie-li-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.movie-li-header h3{
+    text-align: center;
+}
+
+.movie-li-footer{
+    width: 60%;
+}
+
+.movie-li-poster{
+    width: 250px;
+    height: 250px
+}
