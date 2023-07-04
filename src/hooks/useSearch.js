@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 
 export function useSearch() {
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState(null)
     const [error, setError] = useState(null)
   
     useEffect(() => {
+      if (search === null) return
+
       if (search === ''){
         setError('Ingrese un nombre de pelicula para buscar')
         return
