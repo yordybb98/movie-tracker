@@ -1,12 +1,19 @@
 import './App.css'
 import { Movies } from './Components/movies'
+import { useSearch } from './hooks/useSearch'
+
 
 function App() {
   
+  const {search, setSearch, error} = useSearch()
+
   const handleSubmit = (event) => {
     event.preventDefault()
-    const fields = Object.fromEntries(new window.FormData(event.target)) //recuperar varios inputs sin necesidad de usar el useRef
-    console.log(fields)
+    console.log(search)
+  }
+
+  const handleChange = (event) => {
+    setSearch(event.target.value)
   }
 
   return (
@@ -14,11 +21,13 @@ function App() {
       <header>
         <h1>Movie Finder</h1>
         <form action="" className='form' onSubmit={handleSubmit}>
-          <input name='query' type="text" placeholder='Avengers, Star Wars, The Matrix ...' />
-          <input name='otro' type="text" placeholder='Avengers, Star Wars, The Matrix ...' />
-          <input name='mas' type="text" placeholder='Avengers, Star Wars, The Matrix ...' />
+          <input style={{
+            border: '1px solid transparent',
+            borderColor: error ? 'red' : 'transparent'
+          }} onChange={handleChange} name='query' type="text" placeholder='Avengers, Star Wars, The Matrix ...' />
           <button type='submit'>Buscar</button>
         </form>
+        {error && <p style={{color: 'red'}}>{error}</p>}
       </header>
       <main>
         <Movies />
